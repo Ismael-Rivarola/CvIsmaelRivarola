@@ -1,15 +1,22 @@
-/* Estilo general */
+/* Paleta */
+:root {
+  --primary: #0077b6;
+  --secondary: #6c63ff;
+  --bg: #f4f4f9;
+  --text: #333;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
+  background: var(--bg);
+  color: var(--text);
 }
 
 header {
-  background: #222;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: white;
   text-align: center;
   padding: 2rem 1rem;
@@ -18,49 +25,98 @@ header {
 header h1 {
   margin: 0;
   font-size: 2.5rem;
+  letter-spacing: 2px;
 }
 
 header p {
   font-size: 1.2rem;
-  color: #ccc;
+  margin-top: 0.5rem;
 }
 
 section {
   max-width: 900px;
   margin: 2rem auto;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
 h2 {
-  border-bottom: 2px solid #222;
-  padding-bottom: 0.3rem;
+  border-left: 5px solid var(--primary);
+  padding-left: 0.6rem;
   margin-bottom: 1rem;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 ul li {
-  background: #eee;
+  background: var(--bg);
   margin: 0.4rem 0;
   padding: 0.6rem;
-  border-radius: 5px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 footer {
-  background: #222;
+  background: #0077b6;
   color: white;
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem 1rem;
   margin-top: 2rem;
 }
 
+footer h2 {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 0.5rem 0;
+}
+
+footer img {
+  width: 22px;
+  height: 22px;
+}
+
 footer a {
-  color: #0af;
+  color: white;
   text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ffdd00;
+}
+
+.cv-link {
+  margin-top: 1.5rem;
+}
+
+.cv-link a {
+  background: white;
+  color: var(--primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cv-link a:hover {
+  background: #ffdd00;
+  color: #222;
 }
