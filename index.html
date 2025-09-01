@@ -1,109 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ismael Rivarola - CV</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <h1>ISMAEL RIVAROLA</h1>
-    <p><i class="fas fa-laptop-code"></i> Software Developer</p>
+  <!-- Header / Hero -->
+  <header class="hero">
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <h1 class="glow">ISMAEL RIVAROLA</h1>
+
+    <p class="typing">
+      <i class="fas fa-laptop-code"></i>
+      <span class="typing-text"
+        data-phrases='["Software Developer","Backend Developer (PHP/Laravel)","API & Database Enthusiast","Building reliable backends"]'>
+        Software Developer
+      </span>
+      <span class="cursor">|</span>
+    </p>
+
+    <!-- Tech marquee -->
+    <div class="marquee">
+      <div class="track">
+        <i class="fa-brands fa-php"></i>
+        <i class="fa-brands fa-laravel"></i>
+        <i class="fa-solid fa-database"></i>
+        <i class="fa-brands fa-js"></i>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-docker"></i>
+        <i class="fa-brands fa-git-alt"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-solid fa-paper-plane"></i>
+        <!-- loop duplicado para efecto infinito -->
+        <i class="fa-brands fa-php"></i>
+        <i class="fa-brands fa-laravel"></i>
+        <i class="fa-solid fa-database"></i>
+        <i class="fa-brands fa-js"></i>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-docker"></i>
+        <i class="fa-brands fa-git-alt"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-solid fa-paper-plane"></i>
+      </div>
+    </div>
+
+    <!-- Ola decorativa -->
+    <div class="hero-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,64L80,69.3C160,75,320,85,480,90.7C640,96,800,96,960,90.7C1120,85,1280,75,1360,69.3L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+      </svg>
+    </div>
   </header>
 
-  <section class="profile">
-    <h2><i class="fas fa-user"></i> Professional Profile</h2>
-    <p>
-      Backend developer in training with experience in PHP and Laravel, 
-      as well as in .NET (C# and VB). Currently expanding knowledge in Laravel 9, 
-      including Eloquent ORM, Livewire, Tailwind CSS integration, and full web 
-      application development.
-    </p>
-  </section>
+  <main>
+    <section class="profile reveal">
+      <h2><i class="fas fa-user"></i> Professional Profile</h2>
+      <p>
+        Backend developer in training with experience in PHP and Laravel, 
+        as well as in .NET (C# and VB). Currently expanding knowledge in Laravel 9, 
+        including Eloquent ORM, Livewire, Tailwind CSS integration, and full web 
+        application development.
+      </p>
+    </section>
 
-  <section class="skills">
-    <h2><i class="fas fa-lightbulb"></i> Skills</h2>
-    <ul>
-      <li><i class="fas fa-users"></i> Leadership</li>
-      <li><i class="fas fa-comments"></i> Effective Communication</li>
-      <li><i class="fas fa-people-group"></i> Teamwork</li>
-      <li><i class="fas fa-sync"></i> Adaptability</li>
-      <li><i class="fas fa-graduation-cap"></i> Continuous Learning</li>
-    </ul>
-  </section>
-
-  <section class="education">
-    <h2><i class="fas fa-book"></i> Education</h2>
-    <p><strong>Instituto Superior Villa del Rosario</strong> – Associate Degree in Software Development (2023 - present)</p>
-    <p><strong>Udemy</strong> – Laravel 9: Build Applications and Websites with PHP 8 and MVC (2025 - present)</p>
-  </section>
-
-  <section class="projects">
-    <h2><i class="fas fa-diagram-project"></i> Relevant Projects</h2>
-    <article>
-      <h3>Finance Step by Step (2025)</h3>
-      <p>Gamified web platform similar to Duolingo for financial education.</p>
-      <ul>
-        <li><strong>Backend:</strong> Laravel 12, Sail (Docker), MySQL 8, Breeze (Sanctum), Livewire</li>
-        <li><strong>Frontend:</strong> React 18, Vite, TypeScript, Tailwind CSS</li>
+    <section class="skills reveal">
+      <h2><i class="fas fa-lightbulb"></i> Skills</h2>
+      <ul class="chips">
+        <li class="chip"><i class="fas fa-users"></i> Leadership</li>
+        <li class="chip"><i class="fas fa-comments"></i> Effective Communication</li>
+        <li class="chip"><i class="fas fa-people-group"></i> Teamwork</li>
+        <li class="chip"><i class="fas fa-sync"></i> Adaptability</li>
+        <li class="chip"><i class="fas fa-graduation-cap"></i> Continuous Learning</li>
       </ul>
-    </article>
-    <article>
-      <h3>Pasta Factory Management System (2024)</h3>
-      <p>Comprehensive system in ASP.NET Web Forms with VB.NET and SQL Server.</p>
-      <ul>
-        <li>Modules for sales, purchases, supplies, providers, statistics, and inventory control</li>
-        <li>Performance optimization with stored procedures and indexes</li>
-      </ul>
-    </article>
-  </section>
+    </section>
 
-  <section class="extra">
-    <h2><i class="fas fa-star"></i> About Me</h2>
-    <p>
-      Beyond my technical training, I am interested in project management, 
-      process optimization, and innovation in digital products. 
-      I have worked on collaborative projects applying agile methodologies, 
-      and I am motivated to keep growing both in backend and frontend, 
-      with a holistic approach to software development.
-    </p>
-    <p>
-      I am passionate about educational technology, enterprise management systems, 
-      and web platforms that improve people’s lives.
-    </p>
-  </section>
+    <section class="education reveal">
+      <h2><i class="fas fa-book"></i> Education</h2>
 
-  <footer>
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h3>Instituto Superior Villa del Rosario</h3>
+            <p>Associate Degree in Software Development (2023 - present)</p>
+          </div>
+          <span class="tl-date">2023 — now</span>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h3>Udemy</h3>
+            <p>Laravel 9: Build Applications and Websites with PHP 8 and MVC (2025 - present)</p>
+          </div>
+          <span class="tl-date">2025</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects reveal">
+      <h2><i class="fas fa-diagram-project"></i> Relevant Projects</h2>
+
+      <div class="cards">
+        <article class="card tilt">
+          <div class="shine"></div>
+          <h3>Finance Game (2025)</h3>
+          <p>Gamified web platform similar to Duolingo for financial education.</p>
+          <ul>
+            <li><strong>Backend:</strong> Laravel 12, Sail (Docker), MySQL 8, Breeze (Sanctum), Livewire</li>
+            <li><strong>Frontend:</strong> React 18, Vite, TypeScript, Tailwind CSS</li>
+          </ul>
+        </article>
+
+        <article class="card tilt">
+          <div class="shine"></div>
+          <h3>Pasta Factory Management System (2024)</h3>
+          <p>Comprehensive system in ASP.NET Web Forms with VB.NET and SQL Server.</p>
+          <ul>
+            <li>Modules for sales, purchases, supplies, providers, statistics, and inventory control</li>
+            <li>Performance optimization with stored procedures and indexes</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="extra reveal">
+      <h2><i class="fas fa-star"></i> About Me</h2>
+      <p>
+        Beyond my technical training, I am interested in project management, 
+        process optimization, and innovation in digital products. 
+        I have worked on collaborative projects applying agile methodologies, 
+        and I am motivated to keep growing both in backend and frontend, 
+        with a holistic approach to software development.
+      </p>
+      <p>
+        I am passionate about educational technology, enterprise management systems, 
+        and web platforms that improve people’s lives.
+      </p>
+    </section>
+  </main>
+
+  <footer class="reveal">
     <h2><i class="fas fa-address-card"></i> Contact</h2>
 
     <p>
-      <img src="https://img.icons8.com/?size=100&id=50809&format=png&color=000000" 
-           alt="Phone">
+      <img src="https://img.icons8.com/?size=100&id=50809&format=png&color=000000" alt="Phone">
       <a href="tel:+543573455898">+54 3573 455898</a>
     </p>
 
     <p>
-      <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000" 
-           alt="Email">
+      <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000" alt="Email">
       <a href="mailto:ismaelrivarola4567@gmail.com">ismaelrivarola4567@gmail.com</a>
     </p>
 
     <p>
-      <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000" 
-           alt="LinkedIn">
+      <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000" alt="LinkedIn">
       <a href="https://www.linkedin.com/in/ismaelrivarola" target="_blank">LinkedIn</a>
     </p>
 
     <div class="cv-link">
-      <a href="https://drive.google.com/file/d/1ZZDLtrkGshIxt2oTn7_iDZqdjlJgYWlE/view?usp=sharing" 
-         target="_blank">
+      <a href="https://drive.google.com/file/d/1ZZDLtrkGshIxt2oTn7_iDZqdjlJgYWlE/view?usp=sharing" target="_blank">
         📄 View Full CV in PDF
       </a>
     </div>
   </footer>
 
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
